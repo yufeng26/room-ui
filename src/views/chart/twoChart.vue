@@ -13,7 +13,7 @@ export default {
   name: "TwoChart",
   data() {
     return {
-      chart: "linkToHelloWorld"
+      chart: "linkToHelloWorld",
     };
   },
   mounted() {
@@ -24,9 +24,9 @@ export default {
     // 初始化图表
     initChart() {
       var dom = document.getElementById("twoEcharts");
-      function Radar(canvasID, num, w, r, g, b, margin, txt) {
+      function Radar(canvasID, num, w, r, g, b, txt) {
         this.CFG = {
-          perDeg: 1
+          perDeg: 1,
         };
         this.id = canvasID;
         this.deg = 0;
@@ -35,7 +35,6 @@ export default {
         this.r = r;
         this.g = g;
         this.b = b;
-        this.margin = margin;
         this.txt = txt;
         this.init();
       }
@@ -44,9 +43,8 @@ export default {
         this.canvas = document.createElement("canvas");
         this.rect = document.createElement("p");
         this.odiv.className = "rect_box";
-        this.odiv.style.width = this.width + "px";
+        this.odiv.style.width = "33.3%";
         this.odiv.style.height = this.width + 40 + "px";
-        this.odiv.style.margin = `${this.margin}px`;
         this.odiv.style.marginTop = "10px";
         this.odiv.style.marginBottom = "0px";
         this.odiv.style.float = "left";
@@ -245,14 +243,14 @@ export default {
         this.ctx.closePath();
         this.ctx.fill();
       };
-      new Radar("can01", 1.2, 120, "24", "207", "145", 40, "刻录中");
-      new Radar("can02", 0.88, 120, "24", "207", "145", 40, "刻录中");
-      new Radar("can02", 0.4, 120, "242", "171", "19", 40, "读取中");
-      new Radar("can01", 0.8, 120, "90", "60", "143", 40, "空闲中");
-      new Radar("can02", 1.45, 120, "6", "159", "239", 40, "检测中");
-      new Radar("can02", 0.6, 120, "6", "159", "239", 40, "检测中");
-    }
-  }
+      new Radar("can01", 1.2, 120, "24", "207", "145", "刻录中");
+      new Radar("can02", 0.88, 120, "24", "207", "145", "刻录中");
+      new Radar("can02", 0.4, 120, "242", "171", "19", "读取中");
+      new Radar("can01", 0.8, 120, "90", "60", "143", "空闲中");
+      new Radar("can02", 1.45, 120, "6", "159", "239", "检测中");
+      new Radar("can02", 0.6, 120, "6", "159", "239", "检测中");
+    },
+  },
 };
 </script>
 <style>
@@ -279,7 +277,7 @@ export default {
 } */
 .rect_p {
   border-radius: 10px;
-  margin: 3px 0;
+  margin: 3px auto;
   box-sizing: content-box;
 }
 </style>
