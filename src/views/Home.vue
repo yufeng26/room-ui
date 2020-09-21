@@ -69,7 +69,7 @@ export default {
 <style>
 .chart {
   width: 100%;
-  min-height: calc(100vh - 84px);
+  height: 100%;
   background-color: #2a2c46;
 }
 .chart .title {

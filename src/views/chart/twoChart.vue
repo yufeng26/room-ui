@@ -13,7 +13,7 @@ export default {
   name: "TwoChart",
   data() {
     return {
-      chart: "linkToHelloWorld",
+      chart: "linkToHelloWorld"
     };
   },
   mounted() {
@@ -26,7 +26,7 @@ export default {
       var dom = document.getElementById("twoEcharts");
       function Radar(canvasID, num, w, r, g, b, margin, txt) {
         this.CFG = {
-          perDeg: 1,
+          perDeg: 1
         };
         this.id = canvasID;
         this.deg = 0;
@@ -52,8 +52,8 @@ export default {
         this.odiv.style.float = "left";
         this.rect.className = "rect_p";
         this.rect.style.width = this.width + "px";
-        this.rect.style.height = "30px";
-        this.rect.style.lineHeight = "30px";
+        this.rect.style.height = "26px";
+        this.rect.style.lineHeight = "26px";
         this.rect.style.textAlign = "center";
         this.rect.style.border = "2px solid #186fbd";
         // this.rect.style.margin = "3px";
@@ -246,16 +246,21 @@ export default {
         this.ctx.fill();
       };
       new Radar("can01", 1.2, 120, "24", "207", "145", 40, "刻录中");
-      new Radar("can02", 1.2, 120, "24", "207", "145", 40, "刻录中");
-      new Radar("can02", 1.2, 120, "242", "171", "19", 40, "读取中");
-      new Radar("can01", 1.2, 120, "90", "60", "143", 40, "空闲中");
-      new Radar("can02", 1.2, 120, "6", "159", "239", 40, "检测中");
-      new Radar("can02", 1.2, 120, "6", "159", "239", 40, "检测中");
-    },
-  },
+      new Radar("can02", 0.88, 120, "24", "207", "145", 40, "刻录中");
+      new Radar("can02", 0.4, 120, "242", "171", "19", 40, "读取中");
+      new Radar("can01", 0.8, 120, "90", "60", "143", 40, "空闲中");
+      new Radar("can02", 1.45, 120, "6", "159", "239", 40, "检测中");
+      new Radar("can02", 0.6, 120, "6", "159", "239", 40, "检测中");
+    }
+  }
 };
 </script>
 <style>
+#twoEcharts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 #twoEcharts:after {
   content: "";
   display: block;
