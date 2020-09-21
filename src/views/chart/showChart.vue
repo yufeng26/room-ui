@@ -54,19 +54,19 @@ export default {
     ThreeChart,
     FourChart,
     FiveChart,
-    SixChart,
+    SixChart
   },
   data() {
     return {
-      msg: "电子库房智能化平台",
+      msg: "电子库房智能化平台"
     };
-  },
+  }
 };
 </script>
 <style>
 .chart {
   width: 100%;
-  min-height: calc(100vh - 84px);
+  height: 100%;
   background-color: #2a2c46;
 }
 .chart .title {
