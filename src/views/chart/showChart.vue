@@ -5,14 +5,16 @@
       <el-row :gutter="20">
         <el-col :md="24" :lg="12" :xl="7">
           <div class="grid-content bg-purple">
-            <OneChart />
+            <TwoChart />
           </div>
         </el-col>
         <el-col :md="24" :lg="12" :xl="10">
           <div class="grid-content bg-purple">
-            <TwoChart />
+            <OneChart />
           </div>
         </el-col>
+      </el-row>
+      <el-row :gutter="20">
         <el-col :md="24" :lg="12" :xl="7">
           <div class="grid-content bg-purple">
             <ThreeChart />
@@ -54,13 +56,13 @@ export default {
     ThreeChart,
     FourChart,
     FiveChart,
-    SixChart
+    SixChart,
   },
   data() {
     return {
-      msg: "电子库房智能化平台"
+      msg: "电子库房智能化平台",
     };
-  }
+  },
 };
 </script>
 <style>

@@ -4,20 +4,36 @@
     <div class="content">
       <a-row :gutter="20">
         <a-col :lg="24" :xl="12" :xxl="7">
-          <div class="grid-content bg-purple">
-            <OneChart />
-          </div>
+          <a-row :gutter="20">
+            <div class="grid-content bg-purple">
+              <TwoChart />
+            </div>
+          </a-row>
+          <a-row :gutter="20">
+            <div class="grid-content bg-purple">
+              <OneChart />
+            </div>
+          </a-row>
         </a-col>
         <a-col :lg="24" :xl="12" :xxl="10">
           <div class="grid-content bg-purple">
-            <TwoChart />
+            <ShanghaiArea />
           </div>
         </a-col>
         <a-col :lg="24" :xl="12" :xxl="7">
-          <div class="grid-content bg-purple">
-            <ThreeChart />
-          </div>
+          <a-row :gutter="20">
+            <div class="grid-content bg-purple">
+              <Liebiao />
+            </div>
+          </a-row>
+          <a-row :gutter="20">
+            <div class="grid-content bg-purple">
+              <ThreeChart />
+            </div>
+          </a-row>
         </a-col>
+      </a-row>
+      <a-row :gutter="20">
         <a-col :lg="24" :xl="12" :xxl="7">
           <div class="grid-content bg-purple">
             <FourChart />
@@ -46,6 +62,8 @@ import ThreeChart from "./chart/threeChart.vue";
 import FourChart from "./chart/fourChart.vue";
 import FiveChart from "./chart/fiveChart.vue";
 import SixChart from "./chart/sixChart.vue";
+import ShanghaiArea from "./chart/shanghaiArea.vue";
+import Liebiao from "./chart/liebiao.vue";
 
 export default {
   name: "Home",
@@ -58,6 +76,8 @@ export default {
     FourChart,
     FiveChart,
     SixChart,
+    ShanghaiArea,
+    Liebiao,
   },
   data() {
     return {
