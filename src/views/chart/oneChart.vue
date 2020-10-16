@@ -86,21 +86,21 @@ export default {
           {
             name: "包数量",
             type: "bar",
-            barWidth: 20,
+            barWidth: 10,
             data: [120, 240, 320, 380, 580],
             itemStyle: { barBorderRadius: 10 }
           },
           {
             name: "条目数量",
             type: "bar",
-            barWidth: 20,
+            barWidth: 10,
             data: [160, 280, 360, 450, 620],
             itemStyle: { barBorderRadius: 10 }
           },
           {
             name: "电子全文",
             type: "bar",
-            barWidth: 20,
+            barWidth: 10,
             data: [230, 320, 480, 610, 780],
             itemStyle: { barBorderRadius: 10 }
           }
