@@ -22,7 +22,7 @@ export default {
         "崇明县人民法院<span>27</span>条",
         "宝山区人民法院泗塘法庭<span>64</span>条",
         "嘉定区人民法院徐行人民法庭<span>12</span>条",
-        "青浦区人民法院<span>12</span>条",
+        "青浦区人民法院<span>12</span>条"
       ],
       list2: [
         "杨浦区人民法院<span>27</span>条",
@@ -31,18 +31,19 @@ export default {
         "崇明县人民法院<span>27</span>条",
         "宝山区人民法院泗塘法庭<span>64</span>条",
         "嘉定区人民法院徐行人民法庭<span>12</span>条",
-        "青浦区人民法院<span>12</span>条",
-      ],
+        "青浦区人民法院<span>12</span>条"
+      ]
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
 .liebiao {
   text-align: left;
-  margin: 20px 5px;
+  padding: 20px 5px;
   overflow: hidden;
+  height: 400px;
 }
 .liebiao h5 {
   line-height: 50px;
