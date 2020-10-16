@@ -1,7 +1,7 @@
 <template>
   <div class="twoChart">
     <div class="tlt">运行状态</div>
-    <div id="twoEcharts" :style="{ width: '100%', height: '360px' }" />
+    <div id="twoEcharts" :style="{ width: '100%', height: '300px' }" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   name: "TwoChart",
   data() {
     return {
-      chart: "linkToHelloWorld",
+      chart: "linkToHelloWorld"
     };
   },
   mounted() {
@@ -26,7 +26,7 @@ export default {
       var dom = document.getElementById("twoEcharts");
       function Radar(canvasID, num, w, r, g, b, txt) {
         this.CFG = {
-          perDeg: 1,
+          perDeg: 1
         };
         this.id = canvasID;
         this.deg = 0;
@@ -243,14 +243,14 @@ export default {
         this.ctx.closePath();
         this.ctx.fill();
       };
-      new Radar("can01", 1.2, 120, "24", "207", "145", "刻录中");
-      new Radar("can02", 0.88, 120, "24", "207", "145", "刻录中");
-      new Radar("can02", 0.4, 120, "242", "171", "19", "读取中");
-      new Radar("can01", 0.8, 120, "90", "60", "143", "空闲中");
-      new Radar("can02", 1.45, 120, "6", "159", "239", "检测中");
-      new Radar("can02", 0.6, 120, "6", "159", "239", "检测中");
-    },
-  },
+      new Radar("can01", 1.2, 100, "24", "207", "145", "刻录中");
+      new Radar("can02", 0.88, 100, "24", "207", "145", "刻录中");
+      new Radar("can02", 0.4, 100, "242", "171", "19", "读取中");
+      new Radar("can01", 0.8, 100, "90", "60", "143", "空闲中");
+      new Radar("can02", 1.45, 100, "6", "159", "239", "检测中");
+      new Radar("can02", 0.6, 100, "6", "159", "239", "检测中");
+    }
+  }
 };
 </script>
 <style>

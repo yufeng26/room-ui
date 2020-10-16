@@ -43,7 +43,7 @@ export default {
   text-align: left;
   padding: 20px 5px;
   overflow: hidden;
-  height: 400px;
+  height: 340px;
 }
 .liebiao h5 {
   line-height: 50px;
@@ -54,7 +54,7 @@ export default {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  line-height: 40px;
+  line-height: 36px;
   font-size: 14px;
   float: left;
   width: 50%;

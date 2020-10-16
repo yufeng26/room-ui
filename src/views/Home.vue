@@ -34,7 +34,7 @@
         </a-col>
       </a-row>
       <a-row :gutter="20">
-        <a-col :lg="24" :xl="12" :xxl="7">
+        <a-col :lg="24" :xl="12" :xxl="7" style=" padding: 0">
           <div class="grid-content bg-purple">
             <FourChart />
           </div>
@@ -44,7 +44,7 @@
             <FiveChart />
           </div>
         </a-col>
-        <a-col :lg="24" :xl="12" :xxl="7">
+        <a-col :lg="24" :xl="12" :xxl="7" style=" padding: 0">
           <div class="grid-content bg-purple">
             <SixChart />
           </div>
@@ -77,13 +77,13 @@ export default {
     FiveChart,
     SixChart,
     ShanghaiArea,
-    Liebiao,
+    Liebiao
   },
   data() {
     return {
-      msg: "电子库房智能化平台",
+      msg: "电子库房智能化平台"
     };
-  },
+  }
 };
 </script>
 <style>
@@ -103,12 +103,12 @@ export default {
   margin: 0px auto 10px auto;
 }
 .chart .content {
-  padding: 0 30px;
+  padding: 0 20px;
   color: #ffffff;
 }
 .grid-content {
   border: 3px solid #424262;
   border-radius: 3px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 </style>

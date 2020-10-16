@@ -1,5 +1,5 @@
 <template>
-  <div id="fourEcharts" :style="{width: '100%', height: '400px'}" />
+  <div id="fourEcharts" :style="{ width: '100%', height: '300px' }" />
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
   name: "FourChart",
   data() {
     return {
-      chart: "linkToHelloWorld",
+      chart: "linkToHelloWorld"
     };
   },
   mounted() {
@@ -28,14 +28,14 @@ export default {
           textStyle: {
             color: "#fff",
             left: "left",
-            fontSize: 14,
+            fontSize: 14
           },
           top: 10,
-          left: 20,
+          left: 20
         },
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b}: {c} ({d}%)",
+          formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         color: ["#10e5ff", "#ffb311", "#706dc4", "#18cf91", "#f73c64"],
         legend: {
@@ -44,8 +44,8 @@ export default {
           top: 10,
           data: ["盘柱1", "盘柱2", "盘柱3", "盘柱4", "盘柱5"],
           textStyle: {
-            color: "#fff",
-          },
+            color: "#fff"
+          }
         },
         series: [
           {
@@ -61,16 +61,16 @@ export default {
               label: {
                 show: true,
                 fontSize: "30",
-                fontWeight: "bold",
-              },
+                fontWeight: "bold"
+              }
             },
             data: [
               { value: 335, name: "盘柱1" },
               { value: 310, name: "盘柱2" },
               { value: 234, name: "盘柱3" },
               { value: 135, name: "盘柱4" },
-              { value: 300, name: "盘柱5" },
-            ],
+              { value: 300, name: "盘柱5" }
+            ]
           },
           {
             name: "访问来源",
@@ -81,10 +81,10 @@ export default {
             hoverOffset: 0,
             label: {
               show: false,
-              position: "center",
+              position: "center"
             },
             labelLine: {
-              show: false,
+              show: false
             },
             data: [
               {
@@ -92,69 +92,69 @@ export default {
                 name: "盘柱1",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
-                  emphasis: { color: "#10e5ff" }, // 鼠标移入颜色
-                },
+                  emphasis: { color: "#10e5ff" } // 鼠标移入颜色
+                }
               },
               {
                 value: 310,
                 name: "盘柱2",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
-                  emphasis: { color: "#ffb311" }, // 鼠标移入颜色
-                },
+                  emphasis: { color: "#ffb311" } // 鼠标移入颜色
+                }
               },
               {
                 value: 234,
                 name: "盘柱3",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
-                  emphasis: { color: "#706dc4" }, // 鼠标移入颜色
-                },
+                  emphasis: { color: "#706dc4" } // 鼠标移入颜色
+                }
               },
               {
                 value: 135,
                 name: "盘柱4",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
-                  emphasis: { color: "#18cf91" }, // 鼠标移入颜色
-                },
+                  emphasis: { color: "#18cf91" } // 鼠标移入颜色
+                }
               },
               {
                 value: 300,
                 name: "盘柱5",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
-                  emphasis: { color: "#f73c64" }, // 鼠标移入颜色
-                },
-              },
-            ],
-          },
-        ],
+                  emphasis: { color: "#f73c64" } // 鼠标移入颜色
+                }
+              }
+            ]
+          }
+        ]
       };
       // 绘制图表
       myChart.setOption(option);
-      myChart.on("mouseover", function (params) {
+      myChart.on("mouseover", function(params) {
         console.log(params);
         myChart.dispatchAction({
           type: "highlight",
           seriesIndex: 1,
-          dataIndex: params.dataIndex,
+          dataIndex: params.dataIndex
         });
         option.series[0].data[params.dataIndex].selected = true;
         // myChart.clear();
         myChart.setOption(option);
       });
-      myChart.on("mouseout", function (params) {
+      myChart.on("mouseout", function(params) {
         myChart.dispatchAction({
           type: "downplay",
           seriesIndex: 1,
-          dataIndex: params.dataIndex,
+          dataIndex: params.dataIndex
         });
         option.series[0].data[params.dataIndex].selected = false;
         // myChart.clear();
         myChart.setOption(option);
       });
-    },
-  },
+    }
+  }
 };
 </script>

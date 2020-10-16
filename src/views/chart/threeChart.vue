@@ -1,5 +1,5 @@
 <template>
-  <div id="threeEcharts" :style="{ width: '100%', height: '400px' }" />
+  <div id="threeEcharts" :style="{ width: '100%', height: '300px' }" />
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
   name: "ThreeChart",
   data() {
     return {
-      chart: "linkToHelloWorld",
+      chart: "linkToHelloWorld"
     };
   },
   mounted() {
@@ -46,7 +46,7 @@ export default {
           trigger: "axis",
           position: function(pt) {
             return [pt[0], "10%"];
-          },
+          }
         },
         title: {
           left: "center",
@@ -55,30 +55,30 @@ export default {
           textStyle: {
             color: "#fff",
             left: "left",
-            fontSize: 14,
-          },
+            fontSize: 14
+          }
         },
         xAxis: {
           type: "category",
           boundaryGap: false,
           data: date,
           splitLine: {
-            show: false,
+            show: false
           },
           splitArea: {
-            show: false,
+            show: false
           },
           axisLine: {
             lineStyle: {
-              color: "#fff",
-            },
+              color: "#fff"
+            }
           },
           name: "日期",
           nameTextStyle: {
             color: "#fff",
             fontSize: 12,
-            nameGap: 2,
-          },
+            nameGap: 2
+          }
         },
         yAxis: {
           type: "value",
@@ -86,21 +86,21 @@ export default {
           name: "数量",
           axisLine: {
             lineStyle: {
-              color: "#fff",
-            },
+              color: "#fff"
+            }
           },
           splitLine: {
             lineStyle: {
-              color: "#595e7f",
-            },
-          },
+              color: "#595e7f"
+            }
+          }
         },
         grid: [{ bottom: 90 }, { top: 50 }, { left: 30 }, { right: 30 }],
         dataZoom: [
           {
             type: "inside",
             start: 20,
-            end: 80,
+            end: 80
           },
           {
             start: 0,
@@ -113,13 +113,13 @@ export default {
               shadowBlur: 3,
               shadowColor: "rgba(0, 0, 0, 0.6)",
               shadowOffsetX: 2,
-              shadowOffsetY: 2,
+              shadowOffsetY: 2
             },
             textStyle: {
-              color: "#fff",
+              color: "#fff"
             },
-            bottom: 20,
-          },
+            bottom: 20
+          }
         ],
         series: [
           {
@@ -129,25 +129,25 @@ export default {
             symbol: "none",
             sampling: "average",
             itemStyle: {
-              color: "rgba(255, 70, 131,0)",
+              color: "rgba(255, 70, 131,0)"
             },
             areaStyle: {
               color: new this.echarts.graphic.LinearGradient(0, 0, 0, 1, [
                 {
                   offset: 0,
-                  color: "rgb(48, 210, 118)",
+                  color: "rgb(48, 210, 118)"
                 },
                 {
                   offset: 1,
-                  color: "rgba(48, 210, 118,0.01)",
-                },
-              ]),
+                  color: "rgba(48, 210, 118,0.01)"
+                }
+              ])
             },
-            data: data,
-          },
-        ],
+            data: data
+          }
+        ]
       });
-    },
-  },
+    }
+  }
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="oneEcharts" :style="{ width: '100%', height: '400px' }" />
+  <div id="oneEcharts" :style="{ width: '100%', height: '300px' }" />
 </template>
 
 <script>
