@@ -77,13 +77,13 @@ export default {
     FiveChart,
     SixChart,
     ShanghaiArea,
-    Liebiao
+    Liebiao,
   },
   data() {
     return {
-      msg: "电子库房智能化平台"
+      msg: "电子库房智能化平台",
     };
-  }
+  },
 };
 </script>
 <style>
@@ -110,5 +110,10 @@ export default {
   border: 3px solid #424262;
   border-radius: 3px;
   margin-top: 10px;
+}
+.liebiao ul li span {
+  color: #cb9a15;
+  padding: 3px;
+  font-size: 15px;
 }
 </style>
