@@ -86,7 +86,7 @@ export default {
   color: #ffffff;
 }
 .grid-content {
-  border: 3px solid #424262;
+  border: 3px solid #30304d;
   border-radius: 3px;
   margin-top: 30px;
 }

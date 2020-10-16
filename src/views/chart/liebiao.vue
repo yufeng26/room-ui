@@ -47,8 +47,10 @@ export default {
 }
 .liebiao h5 {
   line-height: 50px;
-  font-size: 18px;
+  font-size: 14px;
   color: aliceblue;
+  padding-left: 24px;
+  margin: 0;
 }
 .liebiao ul {
   margin: 0 auto;

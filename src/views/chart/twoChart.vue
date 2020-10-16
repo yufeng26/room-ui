@@ -13,7 +13,7 @@ export default {
   name: "TwoChart",
   data() {
     return {
-      chart: "linkToHelloWorld"
+      chart: "linkToHelloWorld",
     };
   },
   mounted() {
@@ -26,7 +26,7 @@ export default {
       var dom = document.getElementById("twoEcharts");
       function Radar(canvasID, num, w, r, g, b, txt) {
         this.CFG = {
-          perDeg: 1
+          perDeg: 1,
         };
         this.id = canvasID;
         this.deg = 0;
@@ -45,7 +45,7 @@ export default {
         this.odiv.className = "rect_box";
         this.odiv.style.width = "33.3%";
         this.odiv.style.height = this.width + 40 + "px";
-        this.odiv.style.marginTop = "10px";
+        this.odiv.style.marginTop = "0px";
         this.odiv.style.marginBottom = "0px";
         this.odiv.style.float = "left";
         this.rect.className = "rect_p";
@@ -249,8 +249,8 @@ export default {
       new Radar("can01", 0.8, 100, "202", "103", "253", "空闲中");
       new Radar("can02", 1.45, 100, "244", "60", "99", "检测中");
       new Radar("can02", 0.6, 100, "244", "60", "99", "检测中");
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -271,6 +271,8 @@ export default {
   line-height: 40px;
   font-size: 14px;
   font-weight: bold;
+  text-align: left;
+  padding-left: 24px;
 }
 /* .rect_box{
   margin-left: calc((100% - 100px));
@@ -279,5 +281,6 @@ export default {
   border-radius: 10px;
   margin: 3px auto;
   box-sizing: content-box;
+  font-weight: bold;
 }
 </style>

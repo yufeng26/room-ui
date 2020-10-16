@@ -10,7 +10,7 @@ export default {
   name: "OneChart",
   data() {
     return {
-      chart: "linkToHelloWorld"
+      chart: "linkToHelloWorld",
     };
   },
   mounted() {
@@ -30,18 +30,18 @@ export default {
           textStyle: {
             color: "#fff",
             left: "left",
-            fontSize: 14
+            fontSize: 14,
           },
           left: 20,
-          top: 10
+          top: 10,
         },
         legend: {
           data: ["包数量", "条目数量", "电子全文"],
           textStyle: {
-            color: "#fff"
+            color: "#fff",
           },
           top: 10,
-          right: 20
+          right: 20,
         },
         tooltip: {
           show: true,
@@ -49,64 +49,64 @@ export default {
           trigger: "axis",
           axisPointer: {
             type: "shadow",
-            shadowStyle: "rgba(150,150,150,0.3)"
-          }
+            shadowStyle: "rgba(150,150,150,0.3)",
+          },
         },
         xAxis: {
           type: "category",
           data: ["2016", "2017", "2018", "2019", "2020"],
           axisLine: {
             lineStyle: {
-              color: "#fff"
-            }
+              color: "#fff",
+            },
           },
           name: "年度",
           nameTextStyle: {
             color: "#fff",
             fontSize: 12,
-            nameGap: 5
-          }
+            nameGap: 5,
+          },
         },
         yAxis: {
           type: "value",
           name: "数量",
           axisLine: {
             lineStyle: {
-              color: "#fff"
-            }
+              color: "#fff",
+            },
           },
           splitLine: {
             lineStyle: {
-              color: "#595e7f"
-            }
-          }
+              color: "#595e7f",
+            },
+          },
         },
         grid: [{ bottom: 40 }, { top: 50 }, { left: 30 }, { right: 30 }],
         series: [
           {
             name: "包数量",
             type: "bar",
-            barWidth: 10,
+            barWidth: 8,
             data: [120, 240, 320, 380, 580],
-            itemStyle: { barBorderRadius: 10 }
+            itemStyle: { barBorderRadius: 10 },
           },
           {
             name: "条目数量",
             type: "bar",
-            barWidth: 10,
+            barWidth: 8,
             data: [160, 280, 360, 450, 620],
-            itemStyle: { barBorderRadius: 10 }
+            itemStyle: { barBorderRadius: 10 },
           },
           {
             name: "电子全文",
             type: "bar",
-            barWidth: 10,
+            barWidth: 8,
             data: [230, 320, 480, 610, 780],
-            itemStyle: { barBorderRadius: 10 }
-          }
-        ]
+            itemStyle: { barBorderRadius: 10 },
+          },
+        ],
       });
-    }
-  }
+    },
+  },
 };
 </script>

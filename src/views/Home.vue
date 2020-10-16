@@ -80,12 +80,12 @@ export default {
     FiveChart,
     SixChart,
     ShanghaiArea,
-    Liebiao
+    Liebiao,
   },
   data() {
     return {
       msg: "电子库房智能化平台",
-      curTime: ""
+      curTime: "",
     };
   },
   mounted() {
@@ -159,8 +159,8 @@ export default {
         }
       }
       this.curTime = timeStr;
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -196,9 +196,10 @@ export default {
   color: #ffffff;
 }
 .grid-content {
-  border: 3px solid #1b1e39;
+  background: #1b1e39;
   border-radius: 3px;
   margin-top: 10px;
+  border: 2px solid #30304d;
 }
 .liebiao ul li span {
   color: #cb9a15;
