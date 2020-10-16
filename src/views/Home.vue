@@ -96,7 +96,6 @@ export default {
   },
   methods: {
     getCurrentDate() {
-      console.log(1234);
       var timeStr = "";
       var curDate = new Date();
       var curYear = curDate.getFullYear(); //获取当前年份

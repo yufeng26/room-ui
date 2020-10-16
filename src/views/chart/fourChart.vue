@@ -33,10 +33,10 @@ export default {
           top: 10,
           left: 20
         },
-        tooltip: {
-          trigger: "item",
-          formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
+        // tooltip: {
+        //   trigger: "item",
+        //   formatter: "{a} <br/>{b}: {c} ({d}%)"
+        // },
         color: ["#10e5ff", "#ffb311", "#706dc4", "#18cf91", "#f73c64"],
         legend: {
           // orient: 'vertical',
@@ -51,18 +51,17 @@ export default {
           {
             name: "访问来源",
             type: "pie",
-            radius: ["50%", "70%"],
+            radius: ["40%", "56%"],
             selectedMode: "single",
             avoidLabelOverlap: false,
             hoverAnimation: true,
-            hoverOffset: 20,
-            selectedOffset: 10,
-            emphasis: {
-              label: {
-                show: true,
-                fontSize: "30",
-                fontWeight: "bold"
-              }
+            hoverOffset: 8,
+            selectedOffset: 6,
+            label: {
+              show: true,
+              fontSize: "16",
+              fontWeight: "bold",
+              formatter: "{b}:({d}%)"
             },
             data: [
               { value: 335, name: "盘柱1" },
@@ -75,7 +74,7 @@ export default {
           {
             name: "访问来源",
             type: "pie",
-            radius: ["41%", "43%"],
+            radius: ["32%", "34%"],
             avoidLabelOverlap: false,
             hoverAnimation: true,
             hoverOffset: 0,

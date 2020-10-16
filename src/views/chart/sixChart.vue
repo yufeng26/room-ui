@@ -51,20 +51,18 @@ export default {
           {
             name: "访问来源",
             type: "pie",
-            radius: ["50%", "70%"],
+            radius: ["40%", "56%"],
             selectedMode: "single",
             avoidLabelOverlap: false,
             hoverAnimation: true,
-            hoverOffset: 20,
-            selectedOffset: 10,
-            emphasis: {
-              label: {
-                show: true,
-                fontSize: "30",
-                fontWeight: "bold"
-              }
+            hoverOffset: 8,
+            selectedOffset: 6,
+            label: {
+              show: true,
+              fontSize: "16",
+              fontWeight: "bold",
+              formatter: "{b}:({d}%)"
             },
-
             data: [
               { value: 60, name: "已使用" },
               { value: 40, name: "未使用" }
@@ -73,7 +71,7 @@ export default {
           {
             name: "访问来源",
             type: "pie",
-            radius: ["41%", "43%"],
+            radius: ["32%", "34%"],
             avoidLabelOverlap: false,
             hoverAnimation: true,
             hoverOffset: 0,
