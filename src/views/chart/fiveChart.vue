@@ -7,14 +7,22 @@ export default {
   name: "FiveChart",
   data() {
     return {
-      chart: "linkToHelloWorld",
+      chart: "linkToHelloWorld"
     };
   },
   mounted() {
     this.initChart();
+    this.timer = setInterval(this.initChart, 10000);
+  },
+  beforeDestroy() {
+    clearInterval(this.timer);
   },
   beforeDestroy() {},
   methods: {
+    // 产生随机数
+    prodshuzi(maxNum, minNum) {
+      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+    },
     // 初始化图表
     initChart() {
       var dom = document.getElementById("fiveEcharts");
@@ -27,19 +35,19 @@ export default {
           textStyle: {
             color: "#fff",
             left: "left",
-            fontSize: 14,
+            fontSize: 14
           },
           fontSize: 12,
           left: 20,
-          top: 15,
+          top: 15
         },
         tooltip: {
           show: true,
           trigger: "axis",
           axisPointer: {
             type: "shadow",
-            shadowStyle: "rgba(150,150,150,0.3)",
-          },
+            shadowStyle: "rgba(150,150,150,0.3)"
+          }
         },
         xAxis: {
           type: "category",
@@ -51,13 +59,13 @@ export default {
             "科技卷",
             "专业卷",
             "照片卷",
-            "录像卷",
+            "录像卷"
           ],
           axisLine: {
             lineStyle: {
-              color: "#fff",
-            },
-          },
+              color: "#fff"
+            }
+          }
           // name: "年度",
           // nameTextStyle: {
           //   color: "#fff",
@@ -70,26 +78,35 @@ export default {
           // name: "数量",
           axisLine: {
             lineStyle: {
-              color: "#fff",
-            },
+              color: "#fff"
+            }
           },
           splitLine: {
             lineStyle: {
-              color: "#595e7f",
-            },
-          },
+              color: "#595e7f"
+            }
+          }
         },
         grid: [{ bottom: 40 }, { top: 50 }, { left: 30 }, { right: 30 }],
         series: [
           {
             type: "bar",
-            data: [120, 200, 150, 180, 270, 110, 330, 370],
+            data: [
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000),
+              this.prodshuzi(50, 1000)
+            ],
             barWidth: 16,
-            itemStyle: { barBorderRadius: 10 },
-          },
-        ],
+            itemStyle: { barBorderRadius: 10 }
+          }
+        ]
       });
-    },
-  },
+    }
+  }
 };
 </script>

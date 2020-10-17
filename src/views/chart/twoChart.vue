@@ -13,20 +13,24 @@ export default {
   name: "TwoChart",
   data() {
     return {
-      chart: "linkToHelloWorld",
+      chart: "linkToHelloWorld"
     };
   },
   mounted() {
     this.initChart();
+    this.timer = setInterval(this.initChart, 10000);
   },
-  beforeDestroy() {},
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
   methods: {
     // 初始化图表
     initChart() {
       var dom = document.getElementById("twoEcharts");
+      dom.innerHTML = "";
       function Radar(canvasID, num, w, r, g, b, txt) {
         this.CFG = {
-          perDeg: 1,
+          perDeg: 1
         };
         this.id = canvasID;
         this.deg = 0;
@@ -243,14 +247,40 @@ export default {
         this.ctx.closePath();
         this.ctx.fill();
       };
-      new Radar("can01", 1.2, 100, "16", "288", "254", "刻录中");
-      new Radar("can02", 0.88, 100, "16", "288", "254", "刻录中");
-      new Radar("can02", 0.4, 100, "253", "178", "17", "读取中");
-      new Radar("can01", 0.8, 100, "202", "103", "253", "空闲中");
-      new Radar("can02", 1.45, 100, "244", "60", "99", "检测中");
-      new Radar("can02", 0.6, 100, "244", "60", "99", "检测中");
-    },
-  },
+      const suijijiaodu = [
+        {
+          z: "刻录中",
+          c: ["16", "288", "254"]
+        },
+        {
+          z: "读取中",
+          c: ["253", "178", "17"]
+        },
+        {
+          z: "空闲中",
+          c: ["202", "103", "253"]
+        },
+        {
+          z: "检测中",
+          c: ["244", "60", "99"]
+        }
+      ];
+      for (let i = 1; i <= 6; i++) {
+        let maxNum = 3,
+          minNum = 0;
+        let num = parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+        new Radar(
+          "can0" + i,
+          (Math.random() * 2).toFixed(1),
+          100,
+          suijijiaodu[num].c[0],
+          suijijiaodu[num].c[1],
+          suijijiaodu[num].c[2],
+          suijijiaodu[num].z
+        );
+      }
+    }
+  }
 };
 </script>
 <style>

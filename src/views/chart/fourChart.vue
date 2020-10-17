@@ -15,9 +15,16 @@ export default {
   },
   mounted() {
     this.initChart();
+    this.timer = setInterval(this.initChart, 10000);
   },
-  beforeDestroy() {},
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
   methods: {
+    // 产生随机数
+    prodshuzi(maxNum, minNum) {
+      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+    },
     // 初始化图表
     initChart() {
       var dom = document.getElementById("fourEcharts");
@@ -64,11 +71,11 @@ export default {
               formatter: "{b}:({d}%)"
             },
             data: [
-              { value: 335, name: "盘柱1" },
-              { value: 310, name: "盘柱2" },
-              { value: 234, name: "盘柱3" },
-              { value: 135, name: "盘柱4" },
-              { value: 300, name: "盘柱5" }
+              { value: this.prodshuzi(100, 500), name: "盘柱1" },
+              { value: this.prodshuzi(100, 500), name: "盘柱2" },
+              { value: this.prodshuzi(100, 500), name: "盘柱3" },
+              { value: this.prodshuzi(100, 500), name: "盘柱4" },
+              { value: this.prodshuzi(100, 500), name: "盘柱5" }
             ]
           },
           {

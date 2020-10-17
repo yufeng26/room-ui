@@ -15,13 +15,21 @@ export default {
   },
   mounted() {
     this.initChart();
+    this.timer = setInterval(this.initChart, 10000);
   },
-  beforeDestroy() {},
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
   methods: {
+    // 产生随机数
+    prodshuzi(maxNum, minNum) {
+      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+    },
     // 初始化图表
     initChart() {
       var dom = document.getElementById("sixEcharts");
       var myChart = this.echarts.init(dom);
+      var cursuiji = this.prodshuzi(10, 100);
       var option = {
         title: {
           text: "容量统计",
@@ -64,8 +72,8 @@ export default {
               formatter: "{b}:({d}%)"
             },
             data: [
-              { value: 60, name: "已使用" },
-              { value: 40, name: "未使用" }
+              { value: cursuiji, name: "已使用" },
+              { value: 100 - cursuiji, name: "未使用" }
             ]
           },
           {
