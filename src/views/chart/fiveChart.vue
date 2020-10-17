@@ -17,7 +17,6 @@ export default {
   beforeDestroy() {
     clearInterval(this.timer);
   },
-  beforeDestroy() {},
   methods: {
     // 产生随机数
     prodshuzi(maxNum, minNum) {

@@ -20,7 +20,7 @@
         </a-col>
         <a-col :lg="24" :xl="12" :xxl="10">
           <div class="grid-content bg-purple">
-            <ShanghaiArea />
+            <ShArea />
           </div>
         </a-col>
         <a-col :lg="24" :xl="12" :xxl="7">
@@ -65,7 +65,8 @@ import ThreeChart from "./chart/threeChart.vue";
 import FourChart from "./chart/fourChart.vue";
 import FiveChart from "./chart/fiveChart.vue";
 import SixChart from "./chart/sixChart.vue";
-import ShanghaiArea from "./chart/shanghaiArea.vue";
+import ShArea from "./chart/shArea.vue";
+// import ShanghaiArea from "./chart/shanghaiArea.vue";
 import Liebiao from "./chart/liebiao.vue";
 
 export default {
@@ -79,13 +80,14 @@ export default {
     FourChart,
     FiveChart,
     SixChart,
-    ShanghaiArea,
+    // ShanghaiArea,
     Liebiao,
+    ShArea
   },
   data() {
     return {
       msg: "电子库房智能化平台",
-      curTime: "",
+      curTime: ""
     };
   },
   mounted() {
@@ -159,8 +161,8 @@ export default {
         }
       }
       this.curTime = timeStr;
-    },
-  },
+    }
+  }
 };
 </script>
 <style>
