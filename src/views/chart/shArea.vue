@@ -67,8 +67,8 @@ export default {
       // 绘制图表
       myChart.setOption({
         title: {
-          text: "上海16区法院分布图 （2020.4）",
-          subtext: "数据来自http://datav.aliyun.com/"
+          text: "上海市16区法院分布图 （2020.4）"
+          // subtext: "数据来自http://datav.aliyun.com/"
         },
         bmap: {},
         series: [
