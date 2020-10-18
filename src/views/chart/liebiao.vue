@@ -22,7 +22,7 @@ export default {
         "崇明县人民法院<span>27</span>条",
         "宝山区人民法院泗塘法庭<span>64</span>条",
         "嘉定区人民法院徐行人民法庭<span>12</span>条",
-        "青浦区人民法院<span>12</span>条",
+        "青浦区人民法院<span>12</span>条"
       ],
       list2: [
         "杨浦区人民法院<span>27</span>条",
@@ -31,10 +31,34 @@ export default {
         "崇明县人民法院<span>27</span>条",
         "宝山区人民法院泗塘法庭<span>64</span>条",
         "嘉定区人民法院徐行人民法庭<span>12</span>条",
-        "青浦区人民法院<span>12</span>条",
-      ],
+        "青浦区人民法院<span>12</span>条"
+      ]
     };
   },
+  mounted() {
+    this.initChart();
+    this.timer = setInterval(this.initChart, 40000);
+  },
+  beforeDestroy() {
+    clearInterval(this.timer);
+  },
+  methods: {
+    // 产生随机数
+    prodshuzi(maxNum, minNum) {
+      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+    },
+    initChart() {
+      this.list1 = this.list2 = [
+        `杨浦区人民法院<span>${this.prodshuzi(10, 99)}</span>条`,
+        `黄浦区人民法院<span>${this.prodshuzi(10, 99)}</span>条`,
+        `嘉定区法院南翔法庭<span>${this.prodshuzi(10, 99)}</span>条`,
+        `崇明县人民法院<span>${this.prodshuzi(10, 99)}</span>条`,
+        `宝山区人民法院泗塘法庭<span>${this.prodshuzi(10, 99)}</span>条`,
+        `嘉定区人民法院徐行人民法庭<span>${this.prodshuzi(10, 99)}</span>条`,
+        `青浦区人民法院<span>${this.prodshuzi(10, 99)}</span>条`
+      ];
+    }
+  }
 };
 </script>
 

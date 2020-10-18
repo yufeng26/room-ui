@@ -18,7 +18,7 @@ export default {
   },
   mounted() {
     this.initChart();
-    this.timer = setInterval(this.initChart, 10000);
+    this.timer = setInterval(this.initChart, 60000);
   },
   beforeDestroy() {
     clearInterval(this.timer);
