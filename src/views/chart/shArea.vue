@@ -123,7 +123,7 @@ export default {
   width: 140px;
   position: absolute;
   top: -3px;
-  left: 0px;
+  left: 10px;
 }
 .shArea span i {
   position: absolute;
@@ -165,6 +165,8 @@ export default {
 }
 .shArea span:nth-child(3)::after {
   content: "宝山区人民法院";
+  top: -30px;
+  left: -10px;
 }
 .shArea span:nth-child(4)::after {
   content: "嘉定区人民法院";
@@ -215,63 +217,63 @@ export default {
   content: "金山区人民法院";
 }
 .shArea span:nth-child(2) {
-  top: 200px;
-  left: 340px;
+  top: 28%;
+  left: 50%;
 }
 .shArea span:nth-child(3) {
-  top: 270px;
-  left: 277px;
+  top: 42.5%;
+  left: 43.5%;
 }
 .shArea span:nth-child(4) {
-  top: 280px;
-  left: 215px;
+  top: 43%;
+  left: 36%;
 }
 .shArea span:nth-child(5) {
-  top: 326px;
-  left: 290px;
+  top: 49.77099%;
+  left: 45.91317%;
 }
 .shArea span:nth-child(6) {
-  top: 320px;
-  left: 312px;
+  top: 47.854961%;
+  left: 49.206587%;
 }
 .shArea span:nth-child(7) {
-  top: 330px;
-  left: 273px;
+  top: 51.381679%;
+  left: 43.26826%;
 }
 .shArea span:nth-child(8) {
-  top: 353px;
-  left: 277px;
+  top: 53.8931297%;
+  left: 46.7065%;
 }
 .shArea span:nth-child(9) {
-  top: 350px;
-  left: 312px;
+  top: 53.43511%;
+  left: 46.706%;
 }
 .shArea span:nth-child(10) {
-  top: 370px;
-  left: 187px;
+  top: 56.488549%;
+  left: 30.99401%;
 }
 .shArea span:nth-child(11) {
-  top: 370px;
-  left: 294px;
+  top: 56.488549%;
+  left: 45.0119%;
 }
 .shArea span:nth-child(12) {
-  top: 380px;
-  left: 407px;
+  top: 58.0152%;
+  left: 57.9281437%;
 }
 .shArea span:nth-child(13) {
-  top: 430px;
-  left: 227px;
+  top: 66.3712%;
+  left: 35.6564%;
 }
 .shArea span:nth-child(14) {
-  top: 420px;
-  left: 297px;
+  top: 62.874%;
+  left: 45.343%;
 }
 .shArea span:nth-child(15) {
-  top: 490px;
-  left: 337px;
+  top: 74.809%;
+  left: 51.45%;
 }
 .shArea span:nth-child(16) {
-  top: 530px;
-  left: 257px;
+  top: 80.91%;
+  left: 38.47%;
 }
 </style>
