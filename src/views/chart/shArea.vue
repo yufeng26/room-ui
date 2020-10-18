@@ -123,7 +123,7 @@ export default {
   width: 140px;
   position: absolute;
   top: -3px;
-  left: 20px;
+  left: 0px;
 }
 .shArea span i {
   position: absolute;
@@ -176,6 +176,7 @@ export default {
 }
 .shArea span:nth-child(6)::after {
   content: "虹口区人民法院";
+  top: -20px;
 }
 .shArea span:nth-child(7)::after {
   content: "普陀区人民法院";
@@ -190,15 +191,19 @@ export default {
 }
 .shArea span:nth-child(10)::after {
   content: "青浦区朱家角人民法庭";
+  left: -160px;
 }
 .shArea span:nth-child(11)::after {
   content: "徐汇区人民法院";
+  top: 20px;
+  left: -70px;
 }
 .shArea span:nth-child(12)::after {
   content: "浦东新区人民法院";
 }
 .shArea span:nth-child(13)::after {
   content: "松江区人民法院";
+  left: -140px;
 }
 .shArea span:nth-child(14)::after {
   content: "闵行区人民法院";
@@ -226,8 +231,8 @@ export default {
   left: 290px;
 }
 .shArea span:nth-child(6) {
-  top: 270px;
-  left: 277px;
+  top: 320px;
+  left: 312px;
 }
 .shArea span:nth-child(7) {
   top: 330px;
@@ -238,35 +243,35 @@ export default {
   left: 277px;
 }
 .shArea span:nth-child(9) {
-  top: 270px;
-  left: 277px;
+  top: 350px;
+  left: 312px;
 }
 .shArea span:nth-child(10) {
-  top: 270px;
-  left: 277px;
+  top: 370px;
+  left: 187px;
 }
 .shArea span:nth-child(11) {
-  top: 270px;
-  left: 277px;
+  top: 370px;
+  left: 294px;
 }
 .shArea span:nth-child(12) {
-  top: 270px;
-  left: 277px;
+  top: 380px;
+  left: 407px;
 }
 .shArea span:nth-child(13) {
-  top: 270px;
-  left: 277px;
+  top: 430px;
+  left: 227px;
 }
 .shArea span:nth-child(14) {
-  top: 270px;
-  left: 277px;
+  top: 420px;
+  left: 297px;
 }
 .shArea span:nth-child(15) {
-  top: 270px;
-  left: 277px;
+  top: 490px;
+  left: 337px;
 }
 .shArea span:nth-child(16) {
-  top: 270px;
-  left: 277px;
+  top: 530px;
+  left: 257px;
 }
 </style>
