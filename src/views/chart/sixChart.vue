@@ -92,7 +92,7 @@ export default {
             },
             data: [
               {
-                value: 60,
+                value: cursuiji,
                 name: "已使用",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
@@ -100,7 +100,7 @@ export default {
                 }
               },
               {
-                value: 40,
+                value: 100 - cursuiji,
                 name: "未使用",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色

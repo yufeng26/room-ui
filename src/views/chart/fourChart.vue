@@ -29,6 +29,11 @@ export default {
     initChart() {
       var dom = document.getElementById("fourEcharts");
       var myChart = this.echarts.init(dom);
+      let val1 = this.prodshuzi(100, 500);
+      let val2 = this.prodshuzi(100, 500);
+      let val3 = this.prodshuzi(100, 500);
+      let val4 = this.prodshuzi(100, 500);
+      let val5 = this.prodshuzi(100, 500);
       var option = {
         title: {
           text: "容量统计",
@@ -71,11 +76,11 @@ export default {
               formatter: "{b}:({d}%)"
             },
             data: [
-              { value: this.prodshuzi(100, 500), name: "盘柱1" },
-              { value: this.prodshuzi(100, 500), name: "盘柱2" },
-              { value: this.prodshuzi(100, 500), name: "盘柱3" },
-              { value: this.prodshuzi(100, 500), name: "盘柱4" },
-              { value: this.prodshuzi(100, 500), name: "盘柱5" }
+              { value: val1, name: "盘柱1" },
+              { value: val2, name: "盘柱2" },
+              { value: val3, name: "盘柱3" },
+              { value: val4, name: "盘柱4" },
+              { value: val5, name: "盘柱5" }
             ]
           },
           {
@@ -94,7 +99,7 @@ export default {
             },
             data: [
               {
-                value: 335,
+                value: val1,
                 name: "盘柱1",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
@@ -102,7 +107,7 @@ export default {
                 }
               },
               {
-                value: 310,
+                value: val2,
                 name: "盘柱2",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
@@ -110,7 +115,7 @@ export default {
                 }
               },
               {
-                value: 234,
+                value: val3,
                 name: "盘柱3",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
@@ -118,7 +123,7 @@ export default {
                 }
               },
               {
-                value: 135,
+                value: val4,
                 name: "盘柱4",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
@@ -126,7 +131,7 @@ export default {
                 }
               },
               {
-                value: 300,
+                value: val5,
                 name: "盘柱5",
                 itemStyle: {
                   normal: { color: "#414160" }, // 正常颜色
