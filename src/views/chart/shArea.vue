@@ -67,7 +67,10 @@ export default {
       // 绘制图表
       myChart.setOption({
         title: {
-          text: "上海市16区法院分布图 （2020.4）"
+          text: "上海市16区法院分布图 （2020.4）",
+          textStyle: { color: "#fff" },
+          left: 20,
+          top: 10
           // subtext: "数据来自http://datav.aliyun.com/"
         },
         bmap: {},
@@ -77,6 +80,11 @@ export default {
             nameProperty: "name",
             type: "map",
             mapType: "ShangHai", // 自定义扩展图表类型
+            emphasis: {
+              itemStyle: {
+                areaColor: "#1362ac"
+              }
+            },
             itemStyle: {
               areaColor: "#1e2353",
               borderColor: "#6c15b1",
